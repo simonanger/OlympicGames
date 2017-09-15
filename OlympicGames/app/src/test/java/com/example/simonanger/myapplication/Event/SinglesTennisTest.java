@@ -36,11 +36,6 @@ public class SinglesTennisTest {
 
 
     @Test
-    public void testMedalsStartEmpty() {
-        assertEquals(0, singlesTennis.getMedals().size());
-    }
-
-    @Test
     public void testCompetitorsStartEmpty() {
         assertEquals(0, singlesTennis.getCompetitors().size());
 
@@ -51,11 +46,6 @@ public class SinglesTennisTest {
         assertEquals(Sport.TENNIS, singlesTennis.getSport());
     }
 
-    @Test
-    public void testAddMedals() {
-        singlesTennis.addStartingMedals();
-        assertEquals(3, singlesTennis.getMedals().size());
-    }
 
     @Test
     public void testAddCompetitors() {
@@ -71,11 +61,6 @@ public class SinglesTennisTest {
         singlesTennis.addCompetitors(athlete3);
         singlesTennis.awardMedals();
         assertEquals(1, athlete1.getMedal().size() );
-    }
-
-    @Test
-    public void decideWinner() throws Exception {
-
     }
 
 }

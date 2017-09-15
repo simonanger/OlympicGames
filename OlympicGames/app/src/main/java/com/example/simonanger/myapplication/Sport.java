@@ -8,6 +8,7 @@ public enum Sport {
     BASKETBALL,
     TENNIS,
     BOXING,
-    ROWING
+    ROWING,
+    RUNNING,
 
 }

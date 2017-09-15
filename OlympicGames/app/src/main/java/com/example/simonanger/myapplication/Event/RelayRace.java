@@ -2,6 +2,7 @@ package com.example.simonanger.myapplication.Event;
 
 import com.example.simonanger.myapplication.Competitors.Athlete;
 import com.example.simonanger.myapplication.Competitors.Competitors;
+import com.example.simonanger.myapplication.Competitors.Team;
 import com.example.simonanger.myapplication.Medal;
 import com.example.simonanger.myapplication.MedalType;
 import com.example.simonanger.myapplication.Sport;
@@ -13,12 +14,12 @@ import java.util.Collections;
  * Created by simonanger on 15/09/2017.
  */
 
-public class SinglesTennis implements Winnable {
+public class RelayRace implements Winnable {
     ArrayList<Medal> medals;
     ArrayList<Competitors> competitors;
     Sport sport;
 
-    public SinglesTennis(Sport sport) {
+    public RelayRace(Sport sport) {
         this.medals = new ArrayList<>();
         this.competitors = new ArrayList<>();
         this.sport = sport;
@@ -47,9 +48,9 @@ public class SinglesTennis implements Winnable {
     }
 
 
-    public void addCompetitors(Athlete athlete) {
-        if (athlete.getSport() == this.getSport()){
-            competitors.add(athlete);
+    public void addTeam(Team team) {
+        if (team.getSport() == this.getSport()){
+            competitors.add(team);
         }
     }
 
@@ -60,5 +61,4 @@ public class SinglesTennis implements Winnable {
         competitors.get(1).awardMedal(medals.get(1));
         competitors.get(2).awardMedal(medals.get(2));
     }
-
 }

@@ -43,16 +43,3 @@ public class Team extends Competitors {
 
     }
 }
-
-//
-//    int highestValue = Integer.MIN_VALUE;
-//    Player winner = null;
-//
-//        for (Player player: players) {
-//                int currentValue = player.getCard().getValue();
-//                if (currentValue > highestValue) {
-//                highestValue = currentValue;
-//                winner = player;
-//                }
-//                }
-//                return winner;

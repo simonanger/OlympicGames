@@ -8,5 +8,4 @@ public interface Winnable {
 
     public void awardMedals();
 
-    public void decideWinner();
 }
