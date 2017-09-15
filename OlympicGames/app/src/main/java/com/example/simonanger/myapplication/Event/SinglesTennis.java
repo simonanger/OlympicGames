@@ -53,8 +53,8 @@ public class SinglesTennis implements Winnable {
     }
 
     public void awardMedals() {
-//        Collections.sort(competitors.points());
-
+        Collections.sort(competitors);
+        Collections.reverse(competitors);
     }
 
     public void decideWinner() {

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by simonanger on 15/09/2017.
  */
 
-public abstract class Competitors {
+public abstract class Competitors implements Comparable<Competitors> {
     private Country country;
     private Sport sport;
     private ArrayList<Medal> medals;
@@ -37,5 +37,13 @@ public abstract class Competitors {
 
     public void awardMedal(Medal medal) {
         medals.add(medal);
+    }
+
+    public int compareTo(Competitors otherCompetitor){
+        if (this.getPoints() == otherCompetitor.getPoints()){
+            return 0;
+        }
+        else
+            return getPoints() > otherCompetitor.getPoints()? 1 : -1;
     }
 }
