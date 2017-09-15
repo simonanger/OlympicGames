@@ -13,10 +13,12 @@ public abstract class Competitors {
     private Country country;
     private Sport sport;
     private ArrayList<Medal> medals;
+    private int points;
     public Competitors(Country country, Sport sport) {
         this.country = country;
         this.sport = sport;
         this.medals = new ArrayList<>();
+        this.points = 0;
     }
 
     public Country getCountry() {
@@ -26,6 +28,8 @@ public abstract class Competitors {
     public Sport getSport() {
         return sport;
     }
+
+    public int getPoints() {return points; }
 
     public ArrayList<Medal> getMedal() {
         return medals;

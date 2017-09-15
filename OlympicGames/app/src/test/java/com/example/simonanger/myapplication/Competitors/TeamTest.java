@@ -29,7 +29,7 @@ public class TeamTest {
         team.addAthlete(athlete2);
         team.awardMedal(goldMedal);
         team.awardMedal(silverMedal);
-        team.totalScore();
+        team.totalPoints();
     }
 
     @Test
@@ -40,7 +40,7 @@ public class TeamTest {
 
     @Test
     public void getTeamScore() {
-        assertEquals(15, team.getTeamScore());
+        assertEquals(15, team.getTeamPoints());
 
     }
 

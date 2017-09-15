@@ -10,20 +10,21 @@ import java.util.ArrayList;
 
 public class Team extends Competitors {
     ArrayList<Athlete> athletes;
-    int teamScore;
+    int points;
 
     public Team(Country country, Sport sport) {
         super(country, sport);
         this.athletes = new ArrayList<>();
-        this.teamScore = 0;
+        this.points = 0;
+
     }
 
     public ArrayList<Athlete> getAthletes() {
         return athletes;
     }
 
-    public int getTeamScore() {
-        return teamScore;
+    public int getTeamPoints() {
+        return points;
     }
 
     public void addAthlete(Athlete athlete) {
@@ -31,10 +32,10 @@ public class Team extends Competitors {
         athletes.add(athlete);}
     }
 
-    public void totalScore() {
+    public void totalPoints() {
         for(Athlete athlete : athletes) {
             int athleteScore = athlete.getPoints();
-            teamScore += athleteScore;
+            points += athleteScore;
         }
 
     }
