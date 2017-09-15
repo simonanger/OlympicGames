@@ -22,6 +22,7 @@ public class SinglesTennis implements Winnable {
         this.medals = new ArrayList<>();
         this.competitors = new ArrayList<>();
         this.sport = sport;
+        addStartingMedals();
     }
 
     public void addStartingMedals() {
@@ -55,6 +56,9 @@ public class SinglesTennis implements Winnable {
     public void awardMedals() {
         Collections.sort(competitors);
         Collections.reverse(competitors);
+        competitors.get(0).awardMedal(medals.get(0));
+        competitors.get(1).awardMedal(medals.get(1));
+        competitors.get(2).awardMedal(medals.get(2));
     }
 
     public void decideWinner() {

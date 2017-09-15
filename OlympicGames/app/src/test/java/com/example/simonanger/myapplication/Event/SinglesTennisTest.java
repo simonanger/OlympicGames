@@ -1,6 +1,7 @@
 package com.example.simonanger.myapplication.Event;
 
 import com.example.simonanger.myapplication.Competitors.Athlete;
+import com.example.simonanger.myapplication.Competitors.Competitors;
 import com.example.simonanger.myapplication.Competitors.Country;
 import com.example.simonanger.myapplication.Competitors.Team;
 import com.example.simonanger.myapplication.Medal;
@@ -30,7 +31,7 @@ public class SinglesTennisTest {
         singlesTennis = new SinglesTennis(Sport.TENNIS);
         athlete1 = new Athlete(Country.FRANCE, Sport.TENNIS, "Big Steve", 15);
         athlete2 = new Athlete(Country.BRAZIL, Sport.TENNIS, "Classic Harrison", 10);
-        athlete2 = new Athlete(Country.BRITAIN, Sport.TENNIS, "Nicky", 5);
+        athlete3 = new Athlete(Country.BRITAIN, Sport.TENNIS, "Nicky", 5);
     }
 
 
@@ -64,8 +65,12 @@ public class SinglesTennisTest {
     }
 
     @Test
-    public void awardMedals() throws Exception {
-
+    public void awardMedals() {
+        singlesTennis.addCompetitors(athlete1);
+        singlesTennis.addCompetitors(athlete2);
+        singlesTennis.addCompetitors(athlete3);
+        singlesTennis.awardMedals();
+        assertEquals(1, athlete1.getMedal().size() );
     }
 
     @Test

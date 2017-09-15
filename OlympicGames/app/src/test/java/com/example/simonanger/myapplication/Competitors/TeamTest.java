@@ -29,7 +29,7 @@ public class TeamTest {
         team.addAthlete(athlete2);
         team.awardMedal(goldMedal);
         team.awardMedal(silverMedal);
-        team.totalPoints();
+
     }
 
     @Test

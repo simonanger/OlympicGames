@@ -29,7 +29,10 @@ public class Team extends Competitors {
 
     public void addAthlete(Athlete athlete) {
         if(athlete.getSport() == this.getSport() && athlete.getCountry() == this.getCountry()){
-        athletes.add(athlete);}
+        athletes.add(athlete);
+            points += athlete.getPoints();
+        }
+
     }
 
     public void totalPoints() {
