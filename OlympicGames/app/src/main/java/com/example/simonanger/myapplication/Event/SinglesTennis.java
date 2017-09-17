@@ -48,7 +48,7 @@ public class SinglesTennis implements Winnable {
 
 
     public void addCompetitors(Athlete athlete) {
-        if (athlete.getSport() == this.getSport()){
+        if (athlete.getSport() == this.getSport() && competitors.size() < 4){
             competitors.add(athlete);
         }
     }

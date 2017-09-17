@@ -49,7 +49,7 @@ public class RelayRace implements Winnable {
 
 
     public void addTeam(Team team) {
-        if (team.getSport() == this.getSport()){
+        if (team.getSport() == this.getSport() && competitors.size() < 4 ){
             competitors.add(team);
         }
     }

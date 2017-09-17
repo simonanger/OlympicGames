@@ -21,6 +21,8 @@ public class SinglesTennisTest {
     Athlete athlete1;
     Athlete athlete2;
     Athlete athlete3;
+    Athlete athlete4;
+    Athlete athlete5;
     SinglesTennis singlesTennis;
     Medal goldMedal = new Medal(MedalType.GOLD);
     Medal silverMedal = new Medal(MedalType.SILVER);
@@ -32,6 +34,8 @@ public class SinglesTennisTest {
         athlete1 = new Athlete(Country.FRANCE, Sport.TENNIS, "Big Steve", 15);
         athlete2 = new Athlete(Country.BRAZIL, Sport.TENNIS, "Classic Harrison", 10);
         athlete3 = new Athlete(Country.BRITAIN, Sport.TENNIS, "Nicky", 5);
+        athlete4 = new Athlete(Country.BRITAIN, Sport.TENNIS, "Maisie", 7);
+        athlete5 = new Athlete(Country.BRITAIN, Sport.TENNIS, "Katie", 3);
     }
 
 
@@ -52,6 +56,16 @@ public class SinglesTennisTest {
         singlesTennis.addCompetitors(athlete1);
         singlesTennis.addCompetitors(athlete2);
         assertEquals(2, singlesTennis.getCompetitors().size());
+    }
+
+    @Test
+    public void testCannotAddMoreThanFour() {
+        singlesTennis.addCompetitors(athlete1);
+        singlesTennis.addCompetitors(athlete2);
+        singlesTennis.addCompetitors(athlete3);
+        singlesTennis.addCompetitors(athlete4);
+        singlesTennis.addCompetitors(athlete5);
+        assertEquals(4, singlesTennis.getCompetitors().size());
     }
 
     @Test
